@@ -3,7 +3,7 @@ package es.navas.oposiciones;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class NumerosHermanos {
+public class NumerosAmigos {
 	/*
 	 * Dos números enteros positivos A y B son números amigos si la suma de los
 	 * divisores propios de A es igual a B y la suma de los divisores propios de B
@@ -25,13 +25,13 @@ public class NumerosHermanos {
 	 * 6232, 6368 10744, 10856 12285, 14595 17296, 18416
 	 */
 
-	private static Logger logger = Logger.getLogger(NumerosHermanos.class.getName());
+	private static Logger logger = Logger.getLogger(NumerosAmigos.class.getName());
 	/**
 	 * Método main
 	 * 
 	 * @param args Argumentos de la llamada al método main
 	 */
-	public static boolean sonHermanos(int n1, int n2) {
+	public static boolean sonAmigos(int n1, int n2) {
 		
 		// Muestra los divisores propios del primer número
 		logger.log(Level.INFO, "\nLos divisores propios de " + n1 + " son: ");
