@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import es.navas.oposiciones.EcuacionCuadratica.MenorCeroException;
+
 public class EjerciciosOposicion {
 
 	@Test
@@ -32,9 +34,22 @@ public class EjerciciosOposicion {
 		assertFalse(NumeroApocaliptico.esNumeroApocaliptico(3), "apocaliptico 3");	
 		
 	}
+	
 	@Test
 	public void factoresPrimos() {
 		FactoresPrimos.calcularFactoresPrimos(33);
+	}
+	
+	@Test
+	public void ecuacionCuadratica() throws MenorCeroException   {
+		assertThrows(MenorCeroException.class,()-> {EcuacionCuadratica.execute(1, 1, 1);});
+		assertTrue(EcuacionCuadratica.execute(50, 75, 4).length == 2);
+	}
+	@Test
+	public void cuentaVocales() throws MenorCeroException   {
+		assertEquals(2, NumeroVocales.cuentaVocales("aEjhhggffdd"));
+		assertEquals(8, NumeroVocales.cuentaVocales("aaaaaaaa"));
+		assertEquals(0, NumeroVocales.cuentaVocales("vcvcvbbnnmmhhggffddss"));
 	}
 
 }	

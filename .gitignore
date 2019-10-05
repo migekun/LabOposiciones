@@ -12,3 +12,4 @@ bin/
 
 ### Java ###
 *.class
+/.DS_Store
