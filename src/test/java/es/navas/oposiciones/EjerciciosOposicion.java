@@ -22,5 +22,19 @@ public class EjerciciosOposicion {
 		assertFalse(NumeroPrimo.esPrimo(8));
 		assertTrue(NumeroPrimo.esPrimo(31));
 	}
+	
+	@Test
+	public void numeroApocaliptico() {
+		//157, 192, 218, 220, 222
+		assertTrue(NumeroApocaliptico.esNumeroApocaliptico(157));
+		assertFalse(NumeroApocaliptico.esNumeroApocaliptico(192));
+		assertTrue(NumeroApocaliptico.esNumeroApocaliptico(218));
+		assertFalse(NumeroApocaliptico.esNumeroApocaliptico(3), "apocaliptico 3");	
+		
+	}
+	@Test
+	public void factoresPrimos() {
+		FactoresPrimos.calcularFactoresPrimos(33);
+	}
 
 }	
