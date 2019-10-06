@@ -41,15 +41,26 @@ public class EjerciciosOposicion {
 	}
 	
 	@Test
-	public void ecuacionCuadratica() throws MenorCeroException   {
-		assertThrows(MenorCeroException.class,()-> {EcuacionCuadratica.execute(1, 1, 1);});
+	public void ecuacionCuadratica() throws MenorCeroException {
+		assertThrows(MenorCeroException.class, ()-> {EcuacionCuadratica.execute(1, 1, 1);});
 		assertTrue(EcuacionCuadratica.execute(50, 75, 4).length == 2);
 	}
+	
 	@Test
-	public void cuentaVocales() throws MenorCeroException   {
+	public void cuentaVocales() throws MenorCeroException {
 		assertEquals(2, NumeroVocales.cuentaVocales("aEjhhggffdd"));
 		assertEquals(8, NumeroVocales.cuentaVocales("aaaaaaaa"));
 		assertEquals(0, NumeroVocales.cuentaVocales("vcvcvbbnnmmhhggffddss"));
+	}
+
+	@Test
+	public void fibonacci() {
+		int iterativo = Fibonacci.iterativo(6);
+		int recursivo = Fibonacci.recursivo(6);
+		System.out.println("Fibonnaci de: 6 iterativo: " + iterativo + " recursivo: " + recursivo);
+		assertEquals(iterativo, recursivo);
+		assertEquals(8, Fibonacci.iterativo(6));
+
 	}
 
 }	

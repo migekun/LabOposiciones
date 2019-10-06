@@ -8,20 +8,23 @@ package es.navas.oposiciones;
 public class Fibonacci {
 
 	/**
-	 * Time Complexity: T(n) = T(n-1) + T(n-2) exponencial. Extra Space: O(n)
-	 * 
+	 * Time Complexity: T(n) = T(n-1) + T(n-2) exponencial. 
+	 * Extra Space: O(n)
+	 * TODO hacer unit test
 	 * @param numero
 	 * @return
 	 */
 	public static int recursivo(int numero) {
+		//System.out.print("recursivo:" + numero + ", ");
 		if (numero <= 1)
 			return numero;
 		return recursivo(numero - 1) + recursivo(numero - 2);
 	}
 
 	/**
-	 * Time Complexity:O(n) Extra Space: O(n)
-	 * 
+	 * Time Complexity:O(n) 
+	 * Extra Space: O(n)
+	 * TODO hacer unit test
 	 * @param numero
 	 * @return
 	 */
@@ -35,6 +38,7 @@ public class Fibonacci {
 
 		for (i = 2; i <= numero; i++) {
 			f[i] = f[i - 1] + f[i - 2];
+			//System.out.print("f:" + f[i] + ", ");
 		}
 
 		return f[numero];
