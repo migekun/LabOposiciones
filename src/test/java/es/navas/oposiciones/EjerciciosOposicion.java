@@ -71,5 +71,13 @@ public class EjerciciosOposicion {
 		assertEquals(recursivo, iterativo);
 		
 	}
+	@Test
+	public void sumaDigitos() {
+		int iterativo = SumaDigitosNumero.iterativo(123);
+		int recursivo = SumaDigitosNumero.recursivo(123);
+		assertEquals(6, iterativo);
+		assertEquals(recursivo, iterativo);
+		
+	}
 
 }	
