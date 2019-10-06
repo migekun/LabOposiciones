@@ -62,5 +62,14 @@ public class EjerciciosOposicion {
 		assertEquals(8, Fibonacci.iterativo(6));
 
 	}
+	
+	@Test
+	public void factorial() {
+		int iterativo = NumeroFactorial.iterativo(5);
+		int recursivo = NumeroFactorial.recursivo(5);
+		assertEquals(120, iterativo);
+		assertEquals(recursivo, iterativo);
+		
+	}
 
 }	
