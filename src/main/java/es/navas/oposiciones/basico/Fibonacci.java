@@ -1,4 +1,4 @@
-package es.navas.oposiciones;
+package es.navas.oposiciones.basico;
 
 /**
  * 

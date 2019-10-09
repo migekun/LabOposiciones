@@ -4,9 +4,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import es.navas.oposiciones.EcuacionCuadratica.MenorCeroException;
+import es.navas.oposiciones.basico.EcuacionCuadratica;
+import es.navas.oposiciones.basico.FactoresPrimos;
+import es.navas.oposiciones.basico.Fibonacci;
+import es.navas.oposiciones.basico.NumeroApocaliptico;
+import es.navas.oposiciones.basico.NumeroFactorial;
+import es.navas.oposiciones.basico.NumeroPrimo;
+import es.navas.oposiciones.basico.NumeroVocales;
+import es.navas.oposiciones.basico.NumerosAmigos;
+import es.navas.oposiciones.basico.SumaDigitosNumero;
+import es.navas.oposiciones.basico.TorresHanoi;
+import es.navas.oposiciones.basico.EcuacionCuadratica.MenorCeroException;
 
-public class EjerciciosOposicion {
+public class EjerciciosOposicionBasico {
 
 	@Test
 	public void numerosAmigos() {
