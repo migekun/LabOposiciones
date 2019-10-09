@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import es.navas.oposiciones.datosEstaticos.CameliceFrase;
+import es.navas.oposiciones.datosEstaticos.ContadorPalabras;
 import es.navas.oposiciones.datosEstaticos.Palindromo;
 import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya;
 import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya.Validacion;
@@ -37,6 +38,11 @@ class EjerciciosOposicionesDatosEstaticos {
 	@Test
 	void camel() {
 		assertEquals("Hola Caracola", CameliceFrase.cameliza("hOLA caracola"));
+	}
+
+	@Test
+	void cuentaPalabras() {
+		assertEquals(2, ContadorPalabras.cuentaPalabras("hOLA caracola"));
 	}
 
 }
