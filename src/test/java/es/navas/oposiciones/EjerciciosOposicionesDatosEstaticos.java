@@ -1,10 +1,12 @@
 package es.navas.oposiciones;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import es.navas.oposiciones.datosEstaticos.CameliceFrase;
 import es.navas.oposiciones.datosEstaticos.Palindromo;
 import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya;
 import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya.Validacion;
@@ -30,6 +32,11 @@ class EjerciciosOposicionesDatosEstaticos {
 		assertTrue(Palindromo.esPalindromo("apa   apa"));
 		assertFalse(Palindromo.esPalindromo("asfadsfaf"));
 		assertTrue(Palindromo.esPalindromo("a"));
+	}
+	
+	@Test
+	void camel() {
+		assertEquals("Hola Caracola", CameliceFrase.cameliza("hOLA caracola"));
 	}
 
 }
