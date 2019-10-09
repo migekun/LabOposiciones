@@ -15,7 +15,6 @@ public class ValidacionContrasenya {
 		} else {
 			for (int i = 0; i < password.length(); i++) {
 				
-				System.out.println(password.matches("[a-z]+"));
 				if (Character.isLowerCase(password.charAt(i))) {
 					tieneMinuscula = true;
 				}
@@ -30,12 +29,12 @@ public class ValidacionContrasenya {
 				}
 			}
 		}
-		
 		if (!tieneMinuscula) error += "Falta minuscula en el pass\n";
 		if (!tieneMayuscula) error += "Falta mayuscula en el pass\n";
 		if (!tieneNumero) error += "Falta numero en el pass\n";
 		if (!tienePuntuacion) error += "Falta puntuacion en el pass\n";
-	
+		System.out.println(error);
+		validacion.setValido(error=="");
 		validacion.setErrorValidacion(error);
 		return validacion;
 		
