@@ -61,6 +61,7 @@ public class OperacionesNotas {
 		for (int i = 0; i < notas.length; i++){
 			System.out.println("Nota en posic: " + notas[i]);
 		}
+
 	}
 
 	private static float[] obtenNotasTeclado(Scanner teclado) {

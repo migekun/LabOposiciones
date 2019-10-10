@@ -1,4 +1,4 @@
-package es.navas.oposiciones;
+package es.navas.oposiciones.basico;
 
 /**
  * 
@@ -16,7 +16,7 @@ public class NumeroFactorial {
 		for (int i = numero; i > 1; i--) {
 			factorial *= i;
 			System.out.println("factorial: " +factorial + " i:" + i);
-		}
+		} 
 		System.out.println("factorial: " + factorial);
 		return factorial;
 	}

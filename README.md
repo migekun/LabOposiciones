@@ -16,7 +16,7 @@
 9. Suma digitos de número
      - Iterativo
      - Recursivo
-10. Torres de Hanoi
+10. Torres de Hanoi  
 
 
 
