@@ -1,4 +1,4 @@
-package es.navas.oposiciones.datosEstaticos;
+package es.navas.oposiciones.datosEstaticos.cadenas;
 
 public class Palindromo {
 

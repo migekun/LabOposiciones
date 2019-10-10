@@ -1,4 +1,4 @@
-package es.navas.oposiciones.datosEstaticos;
+package es.navas.oposiciones.datosEstaticos.cadenas;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -6,12 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import es.navas.oposiciones.datosEstaticos.CameliceFrase;
-import es.navas.oposiciones.datosEstaticos.CifradoCesar;
-import es.navas.oposiciones.datosEstaticos.ContadorPalabras;
-import es.navas.oposiciones.datosEstaticos.Palindromo;
-import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya;
-import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya.Validacion;
+import es.navas.oposiciones.datosEstaticos.cadenas.CameliceFrase;
+import es.navas.oposiciones.datosEstaticos.cadenas.CifradoCesar;
+import es.navas.oposiciones.datosEstaticos.cadenas.ContadorPalabras;
+import es.navas.oposiciones.datosEstaticos.cadenas.Palindromo;
+import es.navas.oposiciones.datosEstaticos.cadenas.ValidacionContrasenya;
+import es.navas.oposiciones.datosEstaticos.cadenas.ValidacionContrasenya.Validacion;
 
 class EjerciciosOposicionesDatosEstaticos {
 
