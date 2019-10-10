@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import es.navas.oposiciones.datosEstaticos.CameliceFrase;
+import es.navas.oposiciones.datosEstaticos.CifradoCesar;
 import es.navas.oposiciones.datosEstaticos.ContadorPalabras;
 import es.navas.oposiciones.datosEstaticos.Palindromo;
 import es.navas.oposiciones.datosEstaticos.ValidacionContrasenya;
@@ -43,6 +44,13 @@ class EjerciciosOposicionesDatosEstaticos {
 	@Test
 	void cuentaPalabras() {
 		assertEquals(2, ContadorPalabras.cuentaPalabras("hOLA caracola"));
+	}
+
+	@Test
+	void cifrado() {
+		assertEquals("cde", CifradoCesar.cifrar("xyz", 5, true));
+		assertEquals("xyz", CifradoCesar.cifrar("cde", 5, false));
+		assertEquals("nuqg", CifradoCesar.cifrar("hola", 6, true));
 	}
 
 }
