@@ -25,3 +25,14 @@
 4. Ahorcado
 5. Cifrado César
 
+** Arrays **
+1. Ordenación por inserción
+2. Ordenación por selección
+3. Triángulo de Pascal
+4. Búsqueda binariaBÚSQUEDA	BINARIA
+
+** Matrices **
+1. Array bidimensional 
+2. Array tridimensional
+3. Tabla de números
+4. Matriz transpuesta
