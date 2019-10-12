@@ -18,5 +18,10 @@
      - Recursivo
 10. Torres de Hanoi  
 
-
+** Cadenas **
+1. Palíndromo
+2. Iniciales
+3. Contador de palabras
+4. Ahorcado
+5. Cifrado César
 
