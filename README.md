@@ -18,7 +18,7 @@
      - Recursivo
 10. Torres de Hanoi  
 
-** Cadenas **
+** Cadenas:**
 1. Palíndromo
 2. Iniciales
 3. Contador de palabras
