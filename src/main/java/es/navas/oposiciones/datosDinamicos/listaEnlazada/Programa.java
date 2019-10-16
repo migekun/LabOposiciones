@@ -12,8 +12,7 @@ public class Programa {
 		ListaEnlazada lista = new ListaEnlazada();
 
 		int aleatorioGenerado;
-		int maxElementosLista;
-		maxElementosLista = Math.abs(random.nextInt() % 60);
+		int maxElementosLista = Math.abs(random.nextInt() % 60);
 		
 		for ( ; maxElementosLista > 0; maxElementosLista--) {
 			aleatorioGenerado = random.nextInt() % 99;
