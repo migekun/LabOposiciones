@@ -7,6 +7,8 @@ public class ArrayTridimensional {
 	static final int PAGINAS = 10;
     static final int LINEAS = 45;
     static final int COLUMNAS = 80;
+	private static Scanner sc;
+	private static Scanner sc2;
 
     /**
      * Método main
@@ -45,13 +47,13 @@ public class ArrayTridimensional {
      * return Devuelve el caracter buscado
      */
     static char buscarPosicion(char a[][][]) {
-        Scanner	 sc = new Scanner(System.in);
+        sc2 = new Scanner(System.in);
         System.out.println("\nIntroduzca la página");
-        int pagina = sc.nextInt();
+        int pagina = sc2.nextInt();
         System.out.println("\nIntroduzca la línea");
-        int linea = sc.nextInt();
+        int linea = sc2.nextInt();
         System.out.println("\nIntroduzca la columna");
-        int columna = sc.nextInt();
+        int columna = sc2.nextInt();
         return a[pagina][linea][columna];
     }
 
@@ -62,7 +64,7 @@ public class ArrayTridimensional {
      */
     static void buscarCaracter(char a[][][]) {
         int pagina, linea, columna;
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         System.out.println("\nIntroduzca el caracter a buscar");
         char caracter = sc.nextLine().charAt(0);
         //Buscamos por todos los caracteres indicando dónde se encuentra

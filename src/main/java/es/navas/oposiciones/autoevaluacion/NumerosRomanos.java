@@ -16,6 +16,7 @@ public class NumerosRomanos {
 	private static final String SIGNOS_NUMEROS_ROMANOS = "MDCLXVI";
 	private static final int[] VALORES_NUMEROS_ROMANOS = {1000, 500, 100, 50, 10, 5, 1};
 	private static final boolean[] VALOR_NUMERO_ROMANO_BASE_10 = {true, false, true, false, true, false, true};
+	private static Scanner sc;
 
 	public static int getSiguienteBase10(int posicion){
 		int siguiente = posicion + 1;
@@ -65,7 +66,7 @@ public class NumerosRomanos {
 	}
 
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		int numero;
 		do{
 			System.out.println("Introduzca un n�mero o pulse 0 para salir");

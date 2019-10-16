@@ -10,9 +10,10 @@ public class CifradoCesar {
 			'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
 			'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 
 			'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+	private static Scanner teclado;
 	
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
 		System.out.println("Escribe una frase:");
 		String frase = teclado.nextLine().toLowerCase();
 		

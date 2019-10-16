@@ -3,6 +3,8 @@ package es.navas.oposiciones.datosEstaticos.arrays;
 import java.util.Scanner;
 
 public class BusquedaBinaria {
+	private static Scanner sc;
+
 	/**
 	 * Método que realiza una búsqueda secuencial
      *
@@ -53,7 +55,7 @@ public class BusquedaBinaria {
      */
     public static void main(String[] args) {
         int[] array = {1, 3, 4, 6, 8, 10, 11, 12, 15, 16, 17, 19, 21, 24, 26, 29, 30, 31, 33, 39};
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         System.out.println("Introduzca un elemento a buscar");
         int valorBuscado = sc.nextInt();
 

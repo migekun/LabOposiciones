@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class ContadorPalabras {
 
+	private static Scanner teclado;
+
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
 		System.out.println("Escribe una frase");
 		
 		String texto = teclado.nextLine();

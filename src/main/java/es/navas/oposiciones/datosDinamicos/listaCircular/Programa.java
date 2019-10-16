@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class Programa {
 
-    /**
+    private static Scanner sc;
+
+	/**
      * Método principal
      *
      * @args Argumentos de la llamada al método principal
@@ -40,7 +42,7 @@ public class Programa {
         
         //Busca un elemento en la lista
         System.out.println("\nElige el elemento a buscar");
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         int valor = sc.nextInt();
         Nodo buscado = lista.buscarLista(valor);
         if (buscado!=null){

@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class TablaNumeros {
 
+	private static Scanner sc;
+
 	/**
      * Método main
      *
@@ -58,7 +60,7 @@ public class TablaNumeros {
     static void solicitarPosicion(int a[][]) {
         int f = 1, c = 1;
         boolean salida = false;
-        Scanner sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
 
         do {
             System.out.print("\nElige el elemento a buscar");
