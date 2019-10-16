@@ -9,9 +9,10 @@ public class Ahorcado {
 
 	private static List<String> palabras = Arrays.asList("test", "otra", "dos");
 	private static List<Character> letrasJugadas = new ArrayList<>();
+	private static Scanner teclado;
 	
 	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
 		System.out.println("Escribe una frase");
 		boolean palabraEncontrada = false;
 		String palabra = palabras.get(getRandomNumberInRange(0, palabras.size()-1));

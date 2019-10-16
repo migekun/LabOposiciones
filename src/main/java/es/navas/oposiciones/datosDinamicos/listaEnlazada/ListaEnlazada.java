@@ -98,9 +98,7 @@ public class ListaEnlazada {
         return this;
     }
 
-    /**
-     * Permite recorrer la lista mostrando la información de cada nodo
-     */
+    
     public void visualizar() {
         Nodo n; //Se utiliza para recorrer la lista
         int k = 0; //Contendrá una variable que va avanzando del 0 al 15
@@ -116,8 +114,47 @@ public class ListaEnlazada {
         System.out.println("");
     }
     
-	public static void main(String[] args) {
-		
-	}
+    public void eliminarLista(int entrada) {
+    	Nodo actual, anterior;
+    	boolean encontrado = false;
+    	actual = primero;
+    	anterior = null;
+    	
+    	while ( actual != null && !encontrado) {
+    		encontrado =  (actual.dato == entrada);
+    		if (!encontrado) {
+    			anterior = actual;
+    			actual = actual.enlace;
+    		}
+    	}	
+    	if (actual != null) {
+    		if (actual == primero) {
+    			primero = actual.enlace;
+    		} else {
+    			anterior.enlace = actual.enlace;
+    		}
+    		actual = null;
+    	}
+    }
+    
+    public void eliminarPosicion(int posicion) {
+    	Nodo actual, anterior;
+    	int aux = 0;
+    	actual = primero;
+    	anterior = null;
+    	while (aux < posicion - 1 && actual != null) {
+    		anterior = actual;
+			actual = actual.enlace;
+			aux++;
+    	}
+    	if (actual != null) {
+    		if (actual == primero) {
+    			primero = actual.enlace;
+    		} else {
+    			anterior.enlace = actual.enlace;
+    		}
+    		actual = null;
+    	}
+    }
 	
 }
