@@ -29,7 +29,7 @@
 1. Ordenación por inserción
 2. Ordenación por selección
 3. Triángulo de Pascal
-4. Búsqueda binariaBÚSQUEDA	BINARIA
+4. Búsqueda binaria
 
 **Matrices**
 1. Array bidimensional 
