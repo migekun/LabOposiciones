@@ -1,6 +1,6 @@
 # LabOposiciones
 
-** Ejercicios:**
+**Ejercicios:**
 1. Números amigos
 2. Número primo
 3. Número apocalíptico
@@ -18,20 +18,20 @@
      - Recursivo
 10. Torres de Hanoi  
 
-** Cadenas:**
+**Cadenas:**
 1. Palíndromo
 2. Iniciales
 3. Contador de palabras
 4. Ahorcado
 5. Cifrado César
 
-** Arrays **
+**Arrays**
 1. Ordenación por inserción
 2. Ordenación por selección
 3. Triángulo de Pascal
 4. Búsqueda binariaBÚSQUEDA	BINARIA
 
-** Matrices **
+**Matrices**
 1. Array bidimensional 
 2. Array tridimensional
 3. Tabla de números
