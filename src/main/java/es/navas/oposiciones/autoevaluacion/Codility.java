@@ -1,5 +1,9 @@
 package es.navas.oposiciones.autoevaluacion;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class Codility {
 	/**
 	Your team is analysing a flight of a plane. Your task is to find the longest period of turbulence.
@@ -37,38 +41,61 @@ public class Codility {
     }
     
     https://www.geeksforgeeks.org/array-data-structure/
+    
 	*/
 	
-	public int solution(int[] A) {
+	public int solution(int[] A) throws IllegalArgumentException {
 		 
-		if (A.length == 1) return 1;
-		
-		boolean greater = A[0] > A[1];
-		boolean lower = A[0] < A[1];
-		int initIndex =1;
-		int endIndex = 1;
-		for (int i = 1; i < A.length-1; i++) {
-			System.out.println("greater: " + greater + " lower: " + lower);
-			
-			if (A[i] < A[i+1]) {
-				System.out.println("A[i]: " + A[i] + " < A[i+1]: " + A[i+1]);
-				
-				lower = true;
-				endIndex++;
-				if (!greater)
-					initIndex = i;
-			} else if(A[i] > A[i+1]) {
-				System.out.println("A[i]: " + A[i] + " > A[i+1]: " + A[i+1]);
-				greater = true;
-				endIndex++;
-				if (!lower)
-				
-					initIndex = i;
-			}
-			System.out.println("endIndex: " + endIndex + " initIndex: " + initIndex );
+		if (A.length < 1 || A.length > 100000) {
+			throw new IllegalArgumentException("Array fuera de ranto: [1..100000]");
 		}
-		System.out.println("FINAL endIndex: " + endIndex + " initIndex: " + initIndex );
-		return endIndex - initIndex;
+		
+		for (int i = 0; i < A.length-1; i++) {
+			if (A[i] < 1 || A[i]> 1000000000) 
+				throw new IllegalArgumentException("Valor contenido en el array fuera de ranto: [1..1000000000]");
+		}
+		
+		List<int[]> element = Arrays.asList(A);
+		
+//		IntStream.range(0, element.size()-1).forEach(i -> {
+//		    doSomething(element.get(i),element.get(i+1));
+//		});
+		
+		
+		Boolean greater = null;
+		Boolean lower = null;
+		int initIndex = 0;
+		int endIndex = 1;
+		int rango = endIndex - initIndex;
+		for (int i = 0; i < A.length-1; i++) {
+			
+			if (A[i] < A[i+1]) {//es at1 menor que at2
+				System.out.println("A[i] < A[i+1]: " + A[i] +  " < " + A[i+1]);
+				if ((lower != null && lower) || (greater != null && !greater)) {
+					initIndex = i;					
+				}
+				lower = true;
+				greater = false;
+				endIndex++;
+			} else if(A[i] > A[i+1]) {
+				System.out.println("A[i] > A[i+1]: " + A[i] +  " > " + A[i+1]);
+				if ((greater != null && greater) || (lower != null && !lower)) {					
+					initIndex = i;					
+				} 
+				greater = true;
+				lower = false;
+				endIndex++;
+			} else {
+				greater = false;
+				lower = false;
+				initIndex = i;
+			}
+			
+			if (rango < endIndex - initIndex) rango = (endIndex - initIndex);
+			System.out.println("rango: " + rango + " initIndex: " + initIndex + " endIndex: " + endIndex);
+		}
+		System.out.println("Rango: " + rango);
+		return rango;
 	}
 	
 	/******************************************************/
