@@ -47,55 +47,48 @@ public class Codility {
 	public int solution(int[] A) throws IllegalArgumentException {
 		 
 		if (A.length < 1 || A.length > 100000) {
-			throw new IllegalArgumentException("Array fuera de ranto: [1..100000]");
-		}
-		
-		for (int i = 0; i < A.length-1; i++) {
-			if (A[i] < 1 || A[i]> 1000000000) 
-				throw new IllegalArgumentException("Valor contenido en el array fuera de ranto: [1..1000000000]");
-		}
-		
-		List<int[]> element = Arrays.asList(A);
-		
-//		IntStream.range(0, element.size()-1).forEach(i -> {
-//		    doSomething(element.get(i),element.get(i+1));
-//		});
-		
-		
-		Boolean greater = null;
-		Boolean lower = null;
-		int initIndex = 0;
-		int endIndex = 1;
-		int rango = endIndex - initIndex;
-		for (int i = 0; i < A.length-1; i++) {
-			
-			if (A[i] < A[i+1]) {//es at1 menor que at2
-				System.out.println("A[i] < A[i+1]: " + A[i] +  " < " + A[i+1]);
-				if ((lower != null && lower) || (greater != null && !greater)) {
-					initIndex = i;					
-				}
-				lower = true;
-				greater = false;
-				endIndex++;
-			} else if(A[i] > A[i+1]) {
-				System.out.println("A[i] > A[i+1]: " + A[i] +  " > " + A[i+1]);
-				if ((greater != null && greater) || (lower != null && !lower)) {					
-					initIndex = i;					
-				} 
-				greater = true;
-				lower = false;
-				endIndex++;
-			} else {
-				greater = false;
-				lower = false;
-				initIndex = i;
-			}
-			
-			if (rango < endIndex - initIndex) rango = (endIndex - initIndex);
-			System.out.println("rango: " + rango + " initIndex: " + initIndex + " endIndex: " + endIndex);
-		}
-		System.out.println("Rango: " + rango);
-		return rango;
+            throw new IllegalArgumentException("Array fuera de ranto: [1..100000]");
+        }
+
+        for (int i = 0; i < A.length-1; i++) {
+            if (A[i] < 1 || A[i]> 1000000000)
+                throw new IllegalArgumentException("Valor contenido en el array fuera de ranto: [1..1000000000]");
+        }
+
+        Boolean greater = false;
+        Boolean lower = false;
+        int initIndex = 0;
+        int endIndex = 1;
+        int rango = endIndex - initIndex;
+        for (int i = 0; i < A.length-1; i++) {
+
+            if (A[i] < A[i+1]) {//es at1 menor que at2
+                System.out.println("A[i] < A[i+1]: " + A[i] +  " < " + A[i+1]);
+                if (lower || !greater) {
+                    initIndex = i;
+                }
+                lower = true;
+                greater = false;
+                endIndex++;
+            } else if(A[i] > A[i+1]) {
+                System.out.println("A[i] > A[i+1]: " + A[i] +  " > " + A[i+1]);
+                if (greater || !lower) {
+                    initIndex = i;
+                }
+                greater = true;
+                lower = false;
+                endIndex++;
+            } else {
+                greater = false;
+                lower = false;
+                initIndex = i;
+            }
+
+            if (rango < endIndex - initIndex) rango = (endIndex - initIndex);
+            System.out.println("rango: " + rango + " initIndex: " + initIndex + " endIndex: " + endIndex);
+        }
+        System.out.println("Rango: " + rango);
+        return rango;
 	}
 	
 	/******************************************************/
