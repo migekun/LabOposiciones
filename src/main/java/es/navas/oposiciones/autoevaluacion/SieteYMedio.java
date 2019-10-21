@@ -1,5 +1,9 @@
 public class SieteYMedio {
+/**
+https://stackoverflow.com/questions/4632322/finding-all-possible-combinations-of-numbers-to-reach-a-given-sum
 
+https://es.wikipedia.org/wiki/Problema_de_la_suma_de_subconjuntos
+*/
 public void sieteYMedio() {
         List<Carta> baraja = new ArrayList<Carta>(){
             {
