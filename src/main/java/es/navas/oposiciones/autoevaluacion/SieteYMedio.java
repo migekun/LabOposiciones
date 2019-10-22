@@ -1,3 +1,8 @@
+package es.navas.oposiciones.autoevaluacion;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class SieteYMedio {
 /**
 https://stackoverflow.com/questions/4632322/finding-all-possible-combinations-of-numbers-to-reach-a-given-sum
@@ -5,6 +10,8 @@ https://stackoverflow.com/questions/4632322/finding-all-possible-combinations-of
 https://es.wikipedia.org/wiki/Problema_de_la_suma_de_subconjuntos
 */
 public void sieteYMedio() {
+
+
         List<Carta> baraja = new ArrayList<Carta>(){
             {
                 add(new Carta("1", 1f, Palo.ORO));
@@ -54,7 +61,7 @@ public void sieteYMedio() {
     }
 
     private static void suma(List<Carta> baraja, float target) {
-        sumaRecursiva(baraja, target, new ArrayList<Carta>());
+        sumaRecursiva(baraja, target, new ArrayList<>());
     }
 
     private static void sumaRecursiva(List<Carta> baraja, float objetivo, List<Carta> barajaParcial) {
@@ -81,6 +88,57 @@ public void sieteYMedio() {
             List<Carta> partial_rec = new ArrayList<>(barajaParcial);
             partial_rec.add(carta);
             sumaRecursiva(remaining, objetivo, partial_rec);
+        }
+    }
+
+    enum Palo {
+        PALO,
+        ORO,
+        BASTO,
+        ESPADAS
+    }
+
+    public class Carta {
+        private String nombre;
+        private float valor;
+        private Palo palo;
+
+        public Carta(String nombre, float valor, Palo palo) {
+            this.nombre = nombre;
+            this.valor = valor;
+            this.palo = palo;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+        public float getValor() {
+            return valor;
+        }
+
+        public void setValor(float valor) {
+            this.valor = valor;
+        }
+
+        public Palo getPalo() {
+            return palo;
+        }
+
+        public void setPalo(Palo palo) {
+            this.palo = palo;
+        }
+
+        public String toString(boolean simple) {
+            return simple ? nombre + "-" + palo.name().substring(0, 1) : "Carta{" +
+                    "nombre='" + nombre + '\'' +
+                    ", valor=" + valor +
+                    ", palo=" + palo +
+                    '}';
         }
     }
 
