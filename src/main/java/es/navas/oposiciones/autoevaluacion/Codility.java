@@ -1,9 +1,5 @@
 package es.navas.oposiciones.autoevaluacion;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-
 public class Codility {
 	/**
 	Your team is analysing a flight of a plane. Your task is to find the longest period of turbulence.
