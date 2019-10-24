@@ -14,46 +14,46 @@ public void sieteYMedio() {
 
         List<Carta> baraja = new ArrayList<Carta>(){
             {
-                add(new Carta("1", 1f, Palo.ORO));
-                add(new Carta("1", 1f, Palo.BASTO));
-                add(new Carta("1", 1f, Palo.ESPADAS));
-                add(new Carta("1", 1f, Palo.PALO));
-                add(new Carta("2", 2f, Palo.ORO));
-                add(new Carta("2", 2f, Palo.BASTO));
-                add(new Carta("2", 2f, Palo.ESPADAS));
-                add(new Carta("2", 2f, Palo.PALO));
-                add(new Carta("3", 3f, Palo.ORO));
-                add(new Carta("3", 3f, Palo.BASTO));
-                add(new Carta("3", 3f, Palo.ESPADAS));
-                add(new Carta("3", 3f, Palo.PALO));
-                add(new Carta("4", 4f, Palo.ORO));
-                add(new Carta("4", 4f, Palo.BASTO));
-                add(new Carta("4", 4f, Palo.ESPADAS));
-                add(new Carta("4", 4f, Palo.PALO));
-                add(new Carta("5", 5f, Palo.ORO));
-                add(new Carta("5", 5f, Palo.BASTO));
-                add(new Carta("5", 5f, Palo.ESPADAS));
-                add(new Carta("5", 5f, Palo.PALO));
-                add(new Carta("6", 6f, Palo.ORO));
-                add(new Carta("6", 6f, Palo.BASTO));
-                add(new Carta("6", 6f, Palo.ESPADAS));
-                add(new Carta("6", 6f, Palo.PALO));
-                add(new Carta("7", 7f, Palo.ORO));
-                add(new Carta("7", 7f, Palo.BASTO));
-                add(new Carta("7", 7f, Palo.ESPADAS));
-                add(new Carta("7", 7f, Palo.PALO));
-                add(new Carta("S", 0.5f, Palo.ORO)); //10
-                add(new Carta("S", 0.5f, Palo.BASTO));
-                add(new Carta("S", 0.5f, Palo.ESPADAS));
-                add(new Carta("S", 0.5f, Palo.PALO));
-                add(new Carta("C", 0.5f, Palo.ORO));//11
-                add(new Carta("C", 0.5f, Palo.BASTO));
-                add(new Carta("C", 0.5f, Palo.ESPADAS));
-                add(new Carta("C", 0.5f, Palo.PALO));
-                add(new Carta("R", 0.5f, Palo.ORO));//12
-                add(new Carta("R", 0.5f, Palo.BASTO));
-                add(new Carta("R", 0.5f, Palo.ESPADAS));
-                add(new Carta("R", 0.5f, Palo.PALO));
+                add(new Carta("1", 1f, Baza.ORO));
+                add(new Carta("1", 1f, Baza.BASTO));
+                add(new Carta("1", 1f, Baza.ESPADAS));
+                add(new Carta("1", 1f, Baza.PALO));
+                add(new Carta("2", 2f, Baza.ORO));
+                add(new Carta("2", 2f, Baza.BASTO));
+                add(new Carta("2", 2f, Baza.ESPADAS));
+                add(new Carta("2", 2f, Baza.PALO));
+                add(new Carta("3", 3f, Baza.ORO));
+                add(new Carta("3", 3f, Baza.BASTO));
+                add(new Carta("3", 3f, Baza.ESPADAS));
+                add(new Carta("3", 3f, Baza.PALO));
+                add(new Carta("4", 4f, Baza.ORO));
+                add(new Carta("4", 4f, Baza.BASTO));
+                add(new Carta("4", 4f, Baza.ESPADAS));
+                add(new Carta("4", 4f, Baza.PALO));
+                add(new Carta("5", 5f, Baza.ORO));
+                add(new Carta("5", 5f, Baza.BASTO));
+                add(new Carta("5", 5f, Baza.ESPADAS));
+                add(new Carta("5", 5f, Baza.PALO));
+                add(new Carta("6", 6f, Baza.ORO));
+                add(new Carta("6", 6f, Baza.BASTO));
+                add(new Carta("6", 6f, Baza.ESPADAS));
+                add(new Carta("6", 6f, Baza.PALO));
+                add(new Carta("7", 7f, Baza.ORO));
+                add(new Carta("7", 7f, Baza.BASTO));
+                add(new Carta("7", 7f, Baza.ESPADAS));
+                add(new Carta("7", 7f, Baza.PALO));
+                add(new Carta("S", 0.5f, Baza.ORO)); //10
+                add(new Carta("S", 0.5f, Baza.BASTO));
+                add(new Carta("S", 0.5f, Baza.ESPADAS));
+                add(new Carta("S", 0.5f, Baza.PALO));
+                add(new Carta("C", 0.5f, Baza.ORO));//11
+                add(new Carta("C", 0.5f, Baza.BASTO));
+                add(new Carta("C", 0.5f, Baza.ESPADAS));
+                add(new Carta("C", 0.5f, Baza.PALO));
+                add(new Carta("R", 0.5f, Baza.ORO));//12
+                add(new Carta("R", 0.5f, Baza.BASTO));
+                add(new Carta("R", 0.5f, Baza.ESPADAS));
+                add(new Carta("R", 0.5f, Baza.PALO));
             }
         };
 
@@ -134,8 +134,8 @@ public void sieteYMedio() {
 			this.baza = baza;
 		}
 
-		public String toString(boolean breve) {
-			return breve ? "N=" + nombre + "-V=" + valor + "-P=" + baza.name().substring(0, 1) :
+		public String toString(boolean simple) {
+			return simple ? nombre + "-" + baza.name().substring(0, 1):
 				"Carta [nombre=" + nombre + ", valor=" + valor + ", baza=" + baza + "]";
 		}
     	
