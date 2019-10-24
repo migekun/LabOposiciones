@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Ahorcado {
 
 	private static List<String> palabras = Arrays.asList("test", "otra", "dos");
-	private static List<Character> letrasJugadas = new ArrayList<>();
+	private static List<Character> letrasJugadas = new ArrayList();
 	private static Scanner teclado;
 	
 	public static void main(String[] args) {
