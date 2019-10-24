@@ -90,56 +90,56 @@ public void sieteYMedio() {
             sumaRecursiva(remaining, objetivo, partial_rec);
         }
     }
-
-    enum Palo {
-        PALO,
-        ORO,
-        BASTO,
-        ESPADAS
+    
+    public enum Baza {
+    	ORO,
+    	BASTO,
+        ESPADAS,
+        PALO
     }
-
+    
     public class Carta {
-        private String nombre;
-        private float valor;
-        private Palo palo;
+    	private String nombre;
+    	private Float valor;
+    	private Baza baza;
+    	
+		public Carta(String nombre, Float valor, Baza baza) {
+			super();
+			this.nombre = nombre;
+			this.valor = valor;
+			this.baza = baza;
+		}
 
-        public Carta(String nombre, float valor, Palo palo) {
-            this.nombre = nombre;
-            this.valor = valor;
-            this.palo = palo;
-        }
+		public String getNombre() {
+			return nombre;
+		}
 
-        public String getNombre() {
-            return nombre;
-        }
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
 
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
+		public Float getValor() {
+			return valor;
+		}
 
-        public float getValor() {
-            return valor;
-        }
+		public void setValor(Float valor) {
+			this.valor = valor;
+		}
 
-        public void setValor(float valor) {
-            this.valor = valor;
-        }
+		public Baza getBaza() {
+			return baza;
+		}
 
-        public Palo getPalo() {
-            return palo;
-        }
+		public void setBaza(Baza baza) {
+			this.baza = baza;
+		}
 
-        public void setPalo(Palo palo) {
-            this.palo = palo;
-        }
-
-        public String toString(boolean simple) {
-            return simple ? nombre + "-" + palo.name().substring(0, 1) : "Carta{" +
-                    "nombre='" + nombre + '\'' +
-                    ", valor=" + valor +
-                    ", palo=" + palo +
-                    '}';
-        }
+		public String toString(boolean breve) {
+			return breve ? "N=" + nombre + "-V=" + valor + "-P=" + baza.name().substring(0, 1) :
+				"Carta [nombre=" + nombre + ", valor=" + valor + ", baza=" + baza + "]";
+		}
+    	
+		
     }
 
 }
