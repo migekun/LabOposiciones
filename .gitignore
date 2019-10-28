@@ -10,7 +10,10 @@ bin/
 .settings
 .springBeans
 
+### intelliJ ###
+LabOposiciones.iml
+.idea
+**/.DS_Store
+
 ### Java ###
 *.class
-**/.DS_Store
-.idea
