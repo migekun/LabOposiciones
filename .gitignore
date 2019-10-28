@@ -13,3 +13,4 @@ bin/
 ### Java ###
 *.class
 **/.DS_Store
+.idea
