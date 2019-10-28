@@ -1,4 +1,4 @@
-package es.navas.oposiciones.autoevaluacion.retos.miniProtocolo;
+package miniProtocolo;
 
 /**
  * Created by manavas on 24/10/19.

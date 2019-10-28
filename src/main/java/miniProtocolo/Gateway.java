@@ -1,8 +1,14 @@
-package es.navas.oposiciones.autoevaluacion.retos.miniProtocolo;
+package miniProtocolo;
 
 /**
  * Created by manavas on 24/10/19.
  */
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
 
 /**
  * Una red IOT, está compuesta por 5 nodos, de los cuales 3 son sensores, (1 de temperatura, 1 de humedad, y otro de luminosidad) y 2 son actuadores (1 sirve para encender/apagar una bomba de riego, y el otro para encender/apagar la iluminación).
@@ -74,10 +80,73 @@ package es.navas.oposiciones.autoevaluacion.retos.miniProtocolo;
  En definitiva, se trata de crear tres clases: nodo_sensor, nodo_actuador y little_data que simulen la implementación de este mini-protocolo de comunicación.
  */
 
-public class Principal {
+public class Gateway {
 
     public static void main(String[] args){
 
+        LittleData.analiza();
+
     }
+
+    static class LittleData {
+
+        private static final Random RANDOM = new Random();
+
+        static void analiza() {
+            long t= System.currentTimeMillis();
+            long end = t + 1000; //1 segundos de simulación
+            while(System.currentTimeMillis() < end) {
+                Nodo nodoSensorTemperatura = new NodoSensor(obtenNumeroRed(), obtenNodo(), obtenValor());
+                Nodo nodoSensorHumedad = new NodoSensor(obtenNumeroRed(), obtenNodo(), obtenValor());
+                Nodo nodoSensorLuminosidad = new NodoSensor(obtenNumeroRed(), obtenNodo(), obtenValor());
+                Nodo nodoActuador1 = new NodoActuador(obtenNumeroRed(), obtenNodo(), RANDOM.nextInt(1));
+                System.out.println(nodoActuador1.leerValor());
+                Nodo nodoActuador2 = new NodoActuador(obtenNumeroRed(), obtenNodo(), RANDOM.nextInt(2));
+                System.out.println(nodoActuador2.leerValor());
+                log("temperatura.txt", nodoSensorTemperatura);
+                log("humedad.txt", nodoSensorHumedad);
+                log("luminosidad.txt", nodoSensorLuminosidad);
+            }
+        }
+
+        private static String obtenNumeroRed() {
+            int numeroRed = RANDOM.nextInt(98) + 1; //avoid cero
+            return numeroRed < 10 ? "0" + numeroRed : String.valueOf(numeroRed);
+        }
+
+        private static String obtenNodo() {
+            int numeroNodo = RANDOM.nextInt(998) + 1; //avoid cero
+            return numeroNodo < 10 ? "00" + numeroNodo :
+                    (numeroNodo < 100 ? "0" + numeroNodo : String.valueOf(numeroNodo));
+        }
+        private static String obtenValor() {
+            int numeroValor = RANDOM.nextInt(1024);
+            return numeroValor < 10 ? "000" + numeroValor:
+                    (numeroValor < 100 ? "00" + numeroValor:
+                            (numeroValor < 1000 ? "0"  + numeroValor:
+                            String.valueOf(numeroValor)));
+        }
+
+
+        public static void log(String nombre, Nodo informacion) {
+            try {
+                File fichero = new File(nombre);
+                BufferedWriter bw;
+                if (fichero.exists()) {
+                    bw = new BufferedWriter(new FileWriter(fichero, true));
+                } else {
+                    bw = new BufferedWriter(new FileWriter(nombre));
+                }
+
+                bw.write(informacion.leerValor() + "\n");
+                bw.close(); //Cerramos el flujo
+            } catch (IOException ioe) {
+                System.out.println("Error de escritura.");
+            }
+        }
+
+    }
+
+
 
 }
