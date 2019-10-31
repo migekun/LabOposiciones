@@ -1,4 +1,4 @@
-package es.navas.oposiciones.autoevaluacion;
+package es.navas.oposiciones.autoevaluacion.retos;
 
 import java.util.ArrayList;
 import java.util.List;
