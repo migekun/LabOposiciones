@@ -29,6 +29,7 @@ class EjerciciosOposicionesAutoevaluacion {
 		assertEquals(2, 1 ^ 3);
 		assertEquals(0, 2 ^ 2);
 		assertEquals(3, BuscaNumeros.buscaUnicoSinPareja(new int[] {1,3,4,1,4,6,8,6,7,8,7}));
+		assertEquals(3, BuscaNumeros.buscaUnicoSinParejaJava8(new int[] {1,3,4,1,4,6,8,6,7,8,7}));
 	}
 
 }

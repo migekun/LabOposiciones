@@ -26,15 +26,9 @@ public class BuscaNumeros {
 		return Arrays.stream(array).sum();
 	}
 
-//	public static int buscaUnicoSinParejaJava8(int[] array) {
-//		int unico = 0;
-//		Arrays.stream(array).map(i-> unico^= i);
-//	
-////		IntStream.range(0, array.length).
-////	             .forEach(i -> i^= array[i]);
-//	             return unico;
-//	}
-//	
-//	public static int buscaUnicoSinPareja
+	public static int buscaUnicoSinParejaJava8(int[] array) {
+		return Arrays.stream(array).reduce(0, (subtotal, element) -> subtotal^element);
+	}
+	
 	
 }
