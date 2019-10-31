@@ -1,4 +1,4 @@
-package es.navas.oposiciones.autoevaluacion;
+package es.navas.oposiciones.autoevaluacion.retos;
 
 public class Codility {
 	/**
