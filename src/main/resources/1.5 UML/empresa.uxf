@@ -135,10 +135,26 @@ is</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>450</y>
-      <w>30</w>
+      <w>120</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m2=0..*
+subordinados</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>520</x>
+      <y>580</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Subordinados se define 
+como una colección de 
+Empleados en la clase Directivo 
+bg=white</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
