@@ -1,0 +1,260 @@
+/* 1.	El fondo de la página será de color gris claro.
+   2.	Todos los elementos de la página tendrán fuente Arial o Helvética, o en su defecto sin serifa.*/
+body{
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* 3.	Todos las cabeceras de la página tendrán fuente Times New Roman, o de la familia Times, o en su defecto con serifa.*/
+h1, h2, h3, h4, h5, h6{
+    font-family:"Times New Roman", Times, serif;
+}
+
+/* 4.	Todos los párrafos de la página tendrán fuente de color gris oscuro.*/
+p{
+    color:darkgray;
+}
+
+/* 5.	Habrá un tipo de elemento con clase “rojo” que tendrá la letra en negrita y color rojo. */
+.rojo{
+    font-weight: bold;
+    color: red;
+}
+
+/* 6.	También habrá un tipo de elemento con clase “subrayado” que simulará un subrayador, y, por tanto, tendrá el fondo amarillo.*/
+.subrayado{
+    background-color: yellow;
+}
+
+/******************* HEADER ***********************/
+header{
+    height: 100px;
+    width: 100%;
+    border-bottom: solid 1px black;
+}
+
+/* Todos los elementos de la cabecera son inline-block para que se coloquen uno a continuación de otro. Alineamos en el top para que no queden abajo */
+header #logotipo, header #registro, header #busqueda, header #busqueda input{
+    display: inline-block;
+    vertical-align: top;
+}
+/* Definimos el tamaño de la caja que va a llevar el logotipo */
+header #logotipo{
+    width: 15%;
+    margin: 20px;
+}
+/* Definimos el tamaño de la imagen; sino tendrá el tamaño original */
+header #logotipo img{
+    width: 100%; /* Si ponemos auto no se redimensiona, pero se monta al reducir el ancho de la página con el resto de elementos */
+    height: 50px;
+}
+
+header #busqueda{
+    width:50%;
+    margin-top: 30px; /* Sitúa la búsqueda en vertical*/
+    margin-left: 50px;  /* Separa la búsqueda del logotipo */
+}
+
+header #busqueda input[type="search"]{
+    width:90%;
+    padding: 10px;
+}
+header #busqueda input[type="image"]{
+    width: 30px;
+    height: auto;
+}
+
+header #registro{
+    margin-top: 30px;/* Sitúa el grupo de botones en vertical a la altura de búsqueda */
+}
+
+/* 7.	Los botones de la cabecera serán de color rojo con las letras blancas.*/
+header #registro button{
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/******************* ASIDE ***********************/
+aside{
+    width: 19%; /* Entre aside y main deben sumar menos de 100% para poder incluir margin y bordes entre los bloques */
+    display: inline-block; /* Permite organizar otros bloques a continuación*/
+    vertical-align: top;
+}
+
+/* 8.	Los elementos de navegación (barra lateral) serán elementos de bloque y tendrán un fondo de un color y un borde alrededor. Este aspecto cambiará si el ratón se encuentra sobre ellos o no. También dispondremos de un estilo especial (asociado a una clase) que se asociará al elemento de navegación que represente la página en la que nos encontramos.
+*/
+aside nav ul li{
+    display: block; /* Se comportan como bloques */
+    padding: 10px; /* Indicamos padding para que las letras no se peguen a los bordes*/
+    list-style: none; /* Eliminamos las viñetas/numeros */
+    border: 1px solid navy;
+    background-color: cornflowerblue;
+}
+
+aside nav ul li:hover{ /* El ratón se encuentra sobre el elemento*/
+    background-color: darkblue;
+    color: white;
+}
+
+
+aside nav ul li.actual{ /* Elemento en el que nos encontramos */
+    background-color:deepskyblue;
+}
+
+aside nav ul li a{
+    text-decoration: none;
+    color: white;
+    /*margin-left:5px;*/
+}
+
+/* 9.	Los enlaces de la página estarán siempre subrayados, excepto los de los elementos del menú de navegación.*/
+a{
+    text-decoration: underline;
+}
+
+/******************* MAIN ***********************/
+main{
+    width: 80%;
+    display: inline-block;
+}
+
+/* 11.	Tanto la sección de artículos destacados como la de artículos dispondrán de una línea horizontal en la parte inferior. */
+main section.destacados, main section.otros {
+    border-bottom: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+/* 12.	Los artículos dispondrán de dos bordes gris oscuro a la derecha y abajo. Entre el borde y el texto habrá una separación de 10px, y entre cada artículo una separación de 20px.  */
+main section article{
+    display: inline-block; /* Para que se coloquen uno a continuación de otro */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho/largo del elemento (articulo, en este caso)*/
+    background-color: aliceblue;
+    width: 28%;
+    height: auto;
+    vertical-align: top; /* Alineamos los artículos en la parte superior */
+    min-height: 450px; /* Nos aseguramos que todos tienen una altura mínima */
+    padding: 10px;
+    margin: 20px;
+    border-bottom: 1px solid darkblue;
+    border-right: 1px solid darkblue;
+}
+/* Clase que utilizamos para el ejercicio de Javascript de búsqueda*/
+main section article.buscado{
+    border: 3px solid red;
+}
+main section article.desmarcar{
+    border: none; /*Reiniciamos todos a vacío*/
+    border-bottom: 1px solid darkblue;
+    border-right: 1px solid darkblue;
+}
+main section article img{
+    height: auto;
+    width: 100%;
+}
+main section article h2{
+    margin: 10px;
+}
+main  section article p{
+    margin: 10px;
+    text-align: justify;
+}
+
+/* 10.	Todos los enlaces que se encuentran en la sección de artículos destacados tendrán color azul; los de la sección de artículos serán de color morado.*/
+main section.destacados article a{
+    color:blue;
+}
+main section.otros article a{
+    color:purple;
+}
+
+/******************* FOOTER ***********************/
+
+/*13.	El pie de página estará separado del resto con una línea horizontal. Tendrá un fondo de color gris más oscuro que el resto de la página.*/
+footer{
+    width: 100%;
+    border-top: solid 4px black;
+    padding: 20px;
+    background-color: slategray;
+}
+/* 14.	Cada sección del pie de página ocupará aproximadamente 1/3 de la misma, tendrá un borde negro y entre sección y sección habrá una separación de 5px. */
+footer div{
+    display: inline-block;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho/largo del elemento (articulo, en este caso)*/
+    vertical-align: top; /* Para que todos los elementos se coloquen arriba independientemente de su altura */
+    width: 30%; /* Aproximadamente 1/3 de ancho */
+    margin: 5px;
+    padding: 20px;
+    background-color: lightgray;
+    border-right: 1px solid black;
+}
+
+footer div h3{
+    font-weight: bold;
+    color: dimgray;
+}
+footer div p{
+    text-align: justify;
+    color: dimgray;
+}
+
+/******************* FORM ***********************/
+/* Para el formulario, deberás distribuir los componentes de tal manera que todos los elementos etiqueta (o texto) se encuentren alineados a la izquierda, y todos los componentes de tipo input, select, textarea, etc. asociados a dichas etiquetas se encuentren alineados entre sí. ¡Ojo! No puedes utilizar tablas para conseguir esta alineación.*/
+main form, main form fieldset{
+    padding: 10px;
+    margin: 10px;
+}
+
+main form div {
+    margin:10px; /* Separa los elementos entre sí */
+}
+
+main form div label {
+    display:inline-block;
+    vertical-align: top;
+    width: 10%;
+    text-align: left;
+}
+
+main form div div { /* Hace referencia al div que contiene los input */
+    display:inline-block;
+    vertical-align: top;
+    width: 85%;
+    margin-top:0px;
+}
+
+main form div div input[type="text"]{
+    width:100%;
+    padding: 10px; /* Espacio entre el borde y las letras */
+}
+
+main form div div textarea {
+    height: 150px;
+    width:100%;
+    padding: 10px; /* Espacio entre el borde y las letras */
+}
+
+main form div div select{
+    width:50%;
+    padding: 10px; /* Espacio entre el borde y las letras */
+}
+
+main form div input[type="submit"], main form div input[type="reset"]{
+    /*Indicamos submit y reset para no coger el resto de inputs */
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Estilo para el último ejercicio de Javascript */
+main div#listaArticulos p{
+    color:black;
+    width:80%;
+    border: 1px solid black;
+    background-color: aliceblue;
+    padding: 15px;
+}
+

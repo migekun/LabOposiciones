@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bloque 2 - Programación web</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <a href="index.html">
+                    <img src="img/logotipo.png" alt="Logotipo"/>
+                </a>
+            </div>
+            <div id="busqueda">
+                <input type="search" placeholder="Articulo a buscar">
+                <input type="image" src="img/buscar.png" alt="buscar">
+            </div>
+            <div id="registro">
+                <button>Registro</button>
+                <button>Carrito</button>
+            </div>
+        </header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Index</a></li>
+                    <li class="actual"><a href="form.html" >Formulario</a></li>
+                    <li><a href="#">Hardware</a></li>
+                    <li><a href="#">Software</a></li>
+                    <li><a href="#">Otros</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <form action="enviar.php">
+                <fieldset>
+                    <legend>Información del artículo</legend>
+                    <div>
+                        <label for="articulo">Artículo *</label>
+                        <div>
+                            <input type="text" id="articulo" name="articulo" minlength="5" maxlength="100" required="required">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripcion *</label>
+                        <div>
+                            <textarea id="descripcion" name="descripcion" required="required"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Clasificación del artículo</legend>
+                    <div>
+                        <label for="destacado">Marcar como destacado</label>
+                        <div>
+                            <input type="checkbox" id="destacado" name="destacado" >
+                        </div>
+                    </div>
+                    <div>
+                        <label for="hardware">Hardware</label>
+                        <div>
+                            <!-- Al marcar checked nos aseguramos de que hay uno pulsado -->
+                            <input type="radio" value="hardware" name="categorias" required="required" checked="checked" >
+                        </div>
+                    </div>
+                    <div>
+                        <label for="software">Software</label>
+                        <div>
+                            <input type="radio" value="software" name="categorias" required="required" >
+                        </div>
+                    </div>
+                    <div>
+                        <label for="servicios">Servicios</label>
+                        <div>
+                            <input type="radio" value="servicios" name="categorias" required="required" >
+                        </div>
+                    </div>
+                    <div>
+
+                        <label for="subcategorias">Subcategorías</label>
+                        <div>
+                            <select id="subcategorias" name="subcategorias" >
+                                <option value="componentes">
+                                    Componentes
+                                </option>
+                                <option value="perifericos">
+                                    Perifericos
+                                </option>
+                                <option value="cableado">
+                                    Cableado
+                                </option>
+                                <option value="equipos">
+                                    Equipos
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="submit" value="Enviar" id="enviar">
+                    <input type="reset" value="Limpiar" id="limpiar">
+                </div>
+            </form>
+            <div id="listaArticulos"></div>
+        </main>
+        <footer>
+            <div>
+                <h3>Datos de la tienda</h3>
+                <p>Mi tienda de informática</p>
+                <p>C/ Hardware nº 0101101</p>
+                <p>01010 Software</p>
+            </div>
+            <div>
+                <h3>Suscribete</h3>
+                <form>
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre"/><br/>
+                    </p>
+                    <p>
+                        <label for="correo">Correo:</label>
+                        <input type="text" id="correo"/>
+                    </p>
+                </form>
+            </div>
+            <div>
+                <h3>Redes sociales</h3>
+                <p>
+                    <a href="#">Twitter</a>
+                </p>
+                <p>
+                    <a href="#">Facebook</a>
+                </p>
+                <p>
+                    <a href="#">Pinterest</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
